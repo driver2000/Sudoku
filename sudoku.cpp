@@ -89,7 +89,7 @@ int main()
         case 0: //l'opzione 0 termina il programma
             system("cls");
             cout<<"Grazie per aver giocato !!! ;-)"<<endl;
-            Sleep(2000);
+            sleep(2);
             delete sudoku;
         }
     }
@@ -110,7 +110,7 @@ void print()
     cout<<endl;
     for(int i=0;i<7;i++)
         cout<<"\t\t"<<s[i]<<endl;
-    Sleep(750);
+    usleep(750000);
     system("cls");
     for(int k=0;k<37;k++)
     {
@@ -155,7 +155,7 @@ short menu()
         if (scelta<0||scelta>4)
         {
             cout<<"Rivedi il menu', hai effettuato una scelta errata"<<endl;
-            Sleep(2000);
+            sleep(2);
             system("cls");
             f=true;
         }
@@ -326,7 +326,7 @@ void loadSudoku(vector<short> &vec, bool flag)
             cout<<endl;
             progressBar();
             cout<<"\n\n\t\t\tPartita Caricata!\a"<<endl;
-            Sleep(2000);
+            sleep(2);
             system("cls");
         }
         char c;
@@ -361,7 +361,7 @@ void saveSudoku(Sudoku **s)
         cout<<endl;
         progressBar();
         cout<<"\n\n\t\t\tPartita Salvata!\a"<<endl;
-        Sleep(2000);
+        sleep(2);
         system("cls");
         for (short i=0;i<9;i++)
             for (short j=0;j<9;j++)

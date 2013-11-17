@@ -1,7 +1,8 @@
 #ifndef PROGRESS_BAR_H
 #define PROGRESS_BAR_H
 #include <iostream>
-#include <windows.h>  //Contiene le API di Windows
+#include <unistd.h>
+//#include <windows.h>  //Contiene le API di Windows
 using namespace std;
 
 void progressBar()
@@ -28,7 +29,7 @@ void progressBar()
         buffer[41]=']';
         sprintf(percent,"%3.2f%%",i/40.0*100.0);
         cout<<"\t\t"<<buffer<<" "<<percent<<'\r';
-        Sleep(35);     //Win32 API : delay di 55 ms
+        usleep(35000);     //Win32 API : delay di 55 ms
     }
 
     sprintf(percent,"%3.2f%%",i/40.0*100.0);
